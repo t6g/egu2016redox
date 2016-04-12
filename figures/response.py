@@ -17,7 +17,7 @@ ax1.plot([6.5, 6.5], [0, 1.2], 'k:') #, [7, 7], [0, 1.2], 'k:')
 plt.xlabel('pH')
 plt.ylabel('f(pH)')
 plt.ylim([0, 1.2])
-plt.text(lx, ly, '(a)', transform=ax1.transAxes)
+plt.text(lx, ly, '(a) CLM4Me', transform=ax1.transAxes)
 
 TC = np.arange(-20, 51, 1)
 TK = TC + 273.15
@@ -32,10 +32,10 @@ plt.semilogy([8, 8], [ymin, ymax], 'k:')
 plt.xlabel('Temperature ($^\circ$C)')
 plt.ylabel('f(T)')
 plt.ylim([ymin, ymax])
-plt.text(lx, ly, '(b)', transform=ax2.transAxes)
+plt.text(lx, ly, '(b) CLM-CN', transform=ax2.transAxes)
 
-plt.subplots_adjust(left=0.12, right=0.95, top=0.95, bottom=0.15)
+plt.subplots_adjust(left=0.15, right=0.95, top=0.95, bottom=0.08)
 
-fig.set_size_inches(6, 8)
+fig.set_size_inches(4.5, 6.75)
 plt.savefig('response.png')
 plt.show()
